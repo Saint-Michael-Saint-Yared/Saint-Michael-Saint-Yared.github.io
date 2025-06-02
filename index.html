@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -69,6 +68,24 @@
       font-style: italic;
       padding-top: 1rem;
     }
+    form input, form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
+    form button {
+      background-color: #005f73;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+      border-radius: 8px;
+    }
+    form button:hover {
+      background-color: #0a9396;
+    }
   </style>
 </head>
 <body>
@@ -135,7 +152,18 @@
     <p><strong>Address:</strong> 410 Melvin Ave, Catonsville, MD 21228</p>
     <p><strong>Phone:</strong> (410) 555-1234</p>
     <p><strong>Email:</strong> <a href="mailto:St.michael.yard@gmail.com">St.michael.yard@gmail.com</a></p>
-    <p><strong>Website:</strong> <a href="https://saint-michael-saint-yared.github.io/">Visit Live Site</a></p>
+    <form action="https://formspree.io/f/mjkrvvne" method="POST">
+      <label for="name">Your Name</label>
+      <input type="text" name="name" id="name" required />
+
+      <label for="email">Your Email</label>
+      <input type="email" name="_replyto" id="email" required />
+
+      <label for="message">Your Message</label>
+      <textarea name="message" id="message" rows="5" required></textarea>
+
+      <button type="submit">Send</button>
+    </form>
     <iframe src="https://www.google.com/maps?q=410+Melvin+Ave,+Catonsville,+MD+21228&output=embed"></iframe>
   </div>
 
