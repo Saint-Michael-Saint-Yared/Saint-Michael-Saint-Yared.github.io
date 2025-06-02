@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://saint-michael-saint-yared.github.io/sitemap.xml
