@@ -26,6 +26,13 @@
       border-radius: 16px;
       box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
+    input[type="search"] {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border-radius: 8px;
+      border: 1px solid #ccc;
+    }
     table {
       width: 100%;
       border-collapse: collapse;
@@ -38,6 +45,9 @@
     th {
       background-color: #005f73;
       color: white;
+    }
+    tr:nth-child(even) {
+      background-color: #f1f1f1;
     }
     footer {
       background-color: #005f73;
@@ -52,9 +62,12 @@
     <h1>Feast Day Calendar</h1>
     <p>Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore</p>
   </header>
+
   <div class="section" id="events">
     <h2>Annual Feast Days</h2>
-    <table>
+    <input type="search" id="searchInput" placeholder="Search feast name or date...">
+
+    <table id="feastTable">
       <thead>
         <tr>
           <th>Calendar Date</th>
@@ -85,8 +98,22 @@
       </tbody>
     </table>
   </div>
+
   <footer>
     <p>&copy; 2025 Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore. All rights reserved.</p>
   </footer>
+
+  <script>
+    const searchInput = document.getElementById("searchInput");
+    const table = document.getElementById("feastTable");
+    searchInput.addEventListener("keyup", function () {
+      const filter = searchInput.value.toLowerCase();
+      const rows = table.querySelectorAll("tbody tr");
+      rows.forEach(row => {
+        const text = row.textContent.toLowerCase();
+        row.style.display = text.includes(filter) ? "" : "none";
+      });
+    });
+  </script>
 </body>
 </html>
