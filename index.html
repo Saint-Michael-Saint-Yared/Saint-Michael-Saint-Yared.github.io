@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Saint Michael and Saint Yared Church Baltimore</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore</title>
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -16,13 +16,19 @@
       background-color: #005f73;
       color: white;
       text-align: center;
-      padding: 2rem;
+      padding: 2rem 1rem;
+    }
+    header img {
+      width: 240px;
+      height: auto;
+      border-radius: 50%;
+      margin-bottom: 1rem;
     }
     nav {
       background-color: #0a9396;
       display: flex;
-      justify-content: center;
       flex-wrap: wrap;
+      justify-content: center;
       padding: 1rem 0;
     }
     nav a {
@@ -35,17 +41,50 @@
       text-decoration: underline;
     }
     .section {
-      max-width: 960px;
-      margin: 2rem auto;
       padding: 2rem;
-      background: white;
+      background-color: white;
+      margin: 1.5rem auto;
+      max-width: 960px;
       border-radius: 16px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      color: #005f73;
     }
     iframe {
       width: 100%;
+      height: 400px;
       border: none;
-      margin: 1rem 0;
+      margin-top: 1rem;
+    }
+    .placeholder {
+      text-align: center;
+      color: #666;
+      font-style: italic;
+      padding-top: 1rem;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+    input, textarea {
+      padding: 0.5rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      font-size: 1rem;
+    }
+    button {
+      background-color: #005f73;
+      color: white;
+      padding: 0.75rem;
+      border: none;
+      border-radius: 8px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #0a9396;
     }
     footer {
       background-color: #005f73;
@@ -57,29 +96,73 @@
 </head>
 <body>
   <header>
-    <h1>Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church</h1>
+    <img src="https://i.etsystatic.com/18195780/r/il/5dd600/1829288331/il_fullxfull.1829288331_goaw.jpg" alt="Saint Michael Logo">
+    <h1>Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore</h1>
     <p>410 Melvin Ave, Catonsville, MD 21228</p>
   </header>
+
   <nav>
-    <a href="index.html">Home</a>
-    <a href="events.html">Events</a>
-    <a href="gallery.html">Gallery</a>
-    <a href="media.html">Media</a>
+    <a href="#about">About</a>
+    <a href="#mission">Mission</a>
+    <a href="#services">Services</a>
+    <a href="#events">Events</a>
+    <a href="#gallery">Gallery</a>
+    <a href="#media">Media</a>
     <a href="#contact">Contact</a>
   </nav>
+
   <div class="section" id="about">
     <h2>About Our Church</h2>
     <p>Welcome to the Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore. We are a community dedicated to teaching and preaching Christianity, following the rich traditions of the Tigray Orthodox Tewahedo faith.</p>
   </div>
+
+  <div class="section" id="mission">
+    <h2>Mission</h2>
+    <p>Our mission is to share the Gospel of Christ, foster spiritual growth, and serve our community in the love of God. We seek to build a welcoming environment where faith, fellowship, and worship bring us closer to God and each other.</p>
+  </div>
+
+  <div class="section" id="services">
+    <h2>Service Schedule</h2>
+    <ul>
+      <li><strong>Sunday Divine Liturgy:</strong> 10:00 AM</li>
+      <li><strong>Holiday Services:</strong> Times vary—please refer to announcements or contact the church office.</li>
+    </ul>
+  </div>
+
+  <div class="section" id="events">
+    <h2>Feast Day Celebrations</h2>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1If9EirRjfQqRtMavOMoIcDhzUUUkQ80p#list"></iframe>
+    <div class="placeholder">If no events appear, please check back soon.</div>
+  </div>
+
+  <div class="section" id="gallery">
+    <h2>Photo Gallery</h2>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=176idm9FVG8AttZ3FOQgb3AqfglOAwEoP#grid"></iframe>
+    <div class="placeholder">Photos from celebrations and community events will appear here.</div>
+  </div>
+
+  <div class="section" id="media">
+    <h2>Media – Sermons & Choir</h2>
+    <iframe src="https://drive.google.com/embeddedfolderview?id=1If9EirRjfQqRtMavOMoIcDhzUUUkQ80p#list"></iframe>
+    <div class="placeholder">Audio and video sermons will be available soon.</div>
+  </div>
+
   <div class="section" id="contact">
     <h2>Contact Us</h2>
+    <p><strong>Address:</strong> 410 Melvin Ave, Catonsville, MD 21228</p>
     <p><strong>Phone:</strong> (410) 555-1234</p>
     <p><strong>Email:</strong> <a href="mailto:St.michael.yard@gmail.com">St.michael.yard@gmail.com</a></p>
-    <p><strong>Address:</strong> 410 Melvin Ave, Catonsville, MD 21228</p>
-    <iframe src="https://www.google.com/maps?q=410+Melvin+Ave,+Catonsville,+MD+21228&output=embed" height="450"></iframe>
+    <form action="https://formspree.io/f/mjkrvvne" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <textarea name="message" placeholder="Your Message" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <iframe src="https://www.google.com/maps?q=410+Melvin+Ave,+Catonsville,+MD+21228&output=embed"></iframe>
   </div>
+
   <footer>
-    <p>&copy; 2025 Saint Michael and Saint Yared Church Baltimore. All rights reserved.</p>
+    <p>&copy; 2025 Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore. All rights reserved.</p>
   </footer>
 </body>
 </html>
