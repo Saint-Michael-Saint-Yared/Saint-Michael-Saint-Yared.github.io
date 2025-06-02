@@ -4,6 +4,10 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Gallery | Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church</title>
+
+  <!-- Lightbox2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -75,6 +79,7 @@
     <h1>Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church</h1>
     <p>Baltimore, Maryland</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="events.html">Events</a>
@@ -109,10 +114,18 @@
   <div class="section" id="gallery">
     <h2>Photo Gallery</h2>
     <div class="gallery">
-      <img src="https://via.placeholder.com/400x300?text=Celebration+1" alt="Celebration 1" />
-      <img src="https://via.placeholder.com/400x300?text=Holy+Day" alt="Holy Day" />
-      <img src="https://via.placeholder.com/400x300?text=Choir+Performance" alt="Choir Performance" />
-      <img src="https://via.placeholder.com/400x300?text=Community+Event" alt="Community Event" />
+      <a href="https://via.placeholder.com/1200x900?text=Celebration+1" data-lightbox="church-gallery" data-title="Celebration 1">
+        <img src="https://via.placeholder.com/400x300?text=Celebration+1" alt="Celebration 1" />
+      </a>
+      <a href="https://via.placeholder.com/1200x900?text=Holy+Day" data-lightbox="church-gallery" data-title="Holy Day">
+        <img src="https://via.placeholder.com/400x300?text=Holy+Day" alt="Holy Day" />
+      </a>
+      <a href="https://via.placeholder.com/1200x900?text=Choir+Performance" data-lightbox="church-gallery" data-title="Choir Performance">
+        <img src="https://via.placeholder.com/400x300?text=Choir+Performance" alt="Choir Performance" />
+      </a>
+      <a href="https://via.placeholder.com/1200x900?text=Community+Event" data-lightbox="church-gallery" data-title="Community Event">
+        <img src="https://via.placeholder.com/400x300?text=Community+Event" alt="Community Event" />
+      </a>
     </div>
   </div>
 
@@ -127,5 +140,8 @@
   <footer>
     <p>&copy; 2025 Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore. All rights reserved.</p>
   </footer>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
 </body>
 </html>
