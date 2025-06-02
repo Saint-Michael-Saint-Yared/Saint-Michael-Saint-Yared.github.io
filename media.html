@@ -4,12 +4,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Media | Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #f7f5ef;
       margin: 0;
       padding: 0;
+      color: #333;
     }
     header {
       background-color: #005f73;
@@ -35,7 +37,7 @@
     .section {
       padding: 2rem;
       max-width: 900px;
-      margin: auto;
+      margin: 2rem auto;
       background-color: white;
       border-radius: 12px;
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
@@ -53,6 +55,11 @@
       width: 100%;
       margin-bottom: 1.5rem;
     }
+    .playlist {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
     footer {
       background-color: #005f73;
       color: white;
@@ -67,25 +74,36 @@
     <h1>Media & Sermons</h1>
     <p>Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore</p>
   </header>
+
   <nav>
     <a href="index.html">Home</a>
     <a href="events.html">Events</a>
     <a href="media.html">Media</a>
+    <a href="gallery.html">Gallery</a>
   </nav>
+
   <div class="section">
     <h2>🎥 Sermons and Services</h2>
-    <iframe src="https://www.youtube.com/embed/HERE_VIDEO_ID" allowfullscreen></iframe>
+    <div class="playlist">
+      <iframe src="https://www.youtube.com/embed/IYtF_p1GPaU" allowfullscreen title="Sermon 1"></iframe>
+      <iframe src="https://www.youtube.com/embed/2FvPKiZcF7I" allowfullscreen title="Sermon 2"></iframe>
+    </div>
 
     <h2>🎵 Choir & Spiritual Songs</h2>
     <audio controls>
-      <source src="https://example.com/your-audio-file.mp3" type="audio/mpeg">
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio controls>
+      <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-2.mp3" type="audio/mpeg">
       Your browser does not support the audio element.
     </audio>
 
     <p>You can submit recordings or requests to: <strong>St.michael.yard@gmail.com</strong></p>
   </div>
+
   <footer>
-    <p>&copy; 2025 Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore</p>
+    <p>&copy; 2025 Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore. All rights reserved.</p>
   </footer>
 </body>
 </html>
