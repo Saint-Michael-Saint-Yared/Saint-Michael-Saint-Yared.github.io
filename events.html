@@ -3,10 +3,65 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Feast Day Calendar</title>
+  <title>Feast Day Calendar | Saint Michael and Saint Yared Church</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f5ef;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+    header {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    h1 {
+      margin: 0;
+    }
+    .calendar-container {
+      max-width: 960px;
+      margin: 2rem auto;
+      background-color: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      overflow: hidden;
+    }
+    iframe {
+      width: 100%;
+      height: 600px;
+      border: none;
+    }
+    footer {
+      background-color: #005f73;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Annual Feast Days</h1>
-  <iframe src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
+
+  <!-- HEADER -->
+  <header>
+    <h1>Annual Feast Day Calendar</h1>
+    <p>Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore</p>
+  </header>
+
+  <!-- CALENDAR EMBED -->
+  <div class="calendar-container">
+    <iframe 
+      src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&amp;ctz=America%2FNew_York" 
+      scrolling="no">
+    </iframe>
+  </div>
+
+  <!-- FOOTER -->
+  <footer>
+    <p>&copy; 2025 Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore</p>
+  </footer>
+
 </body>
 </html>
