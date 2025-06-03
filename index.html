@@ -5,11 +5,14 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore</title>
 
-  <!-- Favicon (optional) -->
+  <!-- Favicon -->
   <link rel="icon" href="saint_michael_logo.jpg" type="image/jpeg">
 
-  <!-- Meta description -->
+  <!-- Meta Description -->
   <meta name="description" content="Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore – community, worship, and fellowship.">
+
+  <!-- Lightbox2 CSS for Gallery -->
+  <link href="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css" rel="stylesheet" />
 
   <style>
     body {
@@ -60,15 +63,37 @@
     }
     iframe {
       width: 100%;
-      height: 450px;
       border: none;
       margin-top: 1rem;
     }
-    .placeholder {
-      text-align: center;
-      color: #666;
-      font-style: italic;
-      padding-top: 1rem;
+    /* Events Calendar iframe height */
+    #calendar-iframe {
+      height: 600px;
+    }
+    /* Gallery */
+    .gallery {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 1.5rem;
+      margin-top: 1rem;
+    }
+    .gallery img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      cursor: pointer;
+    }
+    /* Media */
+    .media-player {
+      margin-top: 1rem;
+      margin-bottom: 1.5rem;
+    }
+    .media-player iframe,
+    .media-player audio {
+      width: 100%;
+      max-width: 100%;
+      margin-top: 1rem;
+      border-radius: 8px;
     }
     form {
       display: flex;
@@ -144,25 +169,56 @@
     </ul>
   </div>
 
-  <!-- EVENTS SECTION (LIVE DRIVE EMBED) -->
+  <!-- EVENTS SECTION (Google Calendar Embed) -->
   <div class="section" id="events">
     <h2>Feast Day Celebrations</h2>
-    <iframe src="https://drive.google.com/embeddedfolderview?id=1L0oQaIDHMU4MImdsMwnbVCtKDnN89oQm#list"></iframe>
-    <div class="placeholder">If no events appear, please check back soon.</div>
+    <!-- Replace YOUR_CALENDAR_ID with your actual Google Calendar ID -->
+    <iframe id="calendar-iframe" src="https://calendar.google.com/calendar/embed?src=YOUR_CALENDAR_ID&amp;ctz=America%2FNew_York"></iframe>
   </div>
 
-  <!-- GALLERY SECTION (LIVE DRIVE EMBED) -->
+  <!-- GALLERY SECTION (Lightbox2) -->
   <div class="section" id="gallery">
     <h2>Photo Gallery</h2>
-    <iframe src="https://drive.google.com/embeddedfolderview?id=1L26YiiSXDKBSSGMGenNya0LbLG_3z_yj#grid"></iframe>
-    <div class="placeholder">Photos from celebrations and community events will appear here.</div>
+    <div class="gallery">
+      <!-- Example placeholder images: upload your real images to the repo 
+           and replace the URLs accordingly (e.g. /images/photo1.jpg) -->
+      <a href="images/celebration1-full.jpg" data-lightbox="church-gallery" data-title="Celebration 1">
+        <img src="images/celebration1-thumb.jpg" alt="Celebration 1">
+      </a>
+      <a href="images/holiday-full.jpg" data-lightbox="church-gallery" data-title="Holy Day">
+        <img src="images/holiday-thumb.jpg" alt="Holy Day">
+      </a>
+      <a href="images/choir-full.jpg" data-lightbox="church-gallery" data-title="Choir Performance">
+        <img src="images/choir-thumb.jpg" alt="Choir Performance">
+      </a>
+      <a href="images/community-full.jpg" data-lightbox="church-gallery" data-title="Community Event">
+        <img src="images/community-thumb.jpg" alt="Community Event">
+      </a>
+    </div>
   </div>
 
-  <!-- MEDIA SECTION (LIVE DRIVE EMBED) -->
+  <!-- MEDIA SECTION (YouTube + Audio) -->
   <div class="section" id="media">
     <h2>Media – Sermons &amp; Choir</h2>
-    <iframe src="https://drive.google.com/embeddedfolderview?id=1L2D9s31FnflGP0G_R1uqqMBFzmc8CvZM#list"></iframe>
-    <div class="placeholder">Audio and video sermons will be available soon.</div>
+    <!-- Replace VIDEO_ID_1 and VIDEO_ID_2 with your actual YouTube video IDs -->
+    <div class="media-player">
+      <h3>Sermon Video 1</h3>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_1" allowfullscreen></iframe>
+    </div>
+    <div class="media-player">
+      <h3>Sermon Video 2</h3>
+      <iframe src="https://www.youtube.com/embed/VIDEO_ID_2" allowfullscreen></iframe>
+    </div>
+    <h3>Choir &amp; Spiritual Songs</h3>
+    <!-- Replace audio file URLs with actual MP3s hosted in your repo or elsewhere -->
+    <audio controls>
+      <source src="media/choir-song1.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
+    <audio controls>
+      <source src="media/choir-song2.mp3" type="audio/mpeg">
+      Your browser does not support the audio element.
+    </audio>
   </div>
 
   <!-- CONTACT SECTION -->
@@ -179,12 +235,15 @@
       <button type="submit">Send Message</button>
     </form>
 
-    <iframe src="https://www.google.com/maps?q=410+Melvin+Ave,+Catonsville,+MD+21228&output=embed"></iframe>
+    <iframe src="https://www.google.com/maps?q=410+Melvin+Ave,+Catonsville,+MD+21228&output=embed" style="height: 450px;"></iframe>
   </div>
 
   <!-- FOOTER -->
   <footer>
     <p>&copy; 2025 Saint Michael and Saint Yared Tigray Orthodox Tewahedo Church Baltimore. All rights reserved.</p>
   </footer>
+
+  <!-- Lightbox2 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js"></script>
 </body>
 </html>
